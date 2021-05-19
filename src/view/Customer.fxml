@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="493.0" prefWidth="884.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController">
+   <children>
+      <ImageView fitHeight="654.0" fitWidth="1168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/background.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="270.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Records" textAlignment="CENTER" wrappingWidth="622.13671875">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER_LEFT" layoutX="122.0" layoutY="564.0" prefHeight="65.0" prefWidth="585.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addCustomerBTN" text="Add New Customer">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#updateCustomerBTN" text="Update Customer">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleteCustomerBTN" text="Delete Customer">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="customerTable" layoutX="122.0" layoutY="129.0" prefHeight="397.0" prefWidth="919.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="272.9999694824219" text="Name" />
+          <TableColumn fx:id="address" prefWidth="144.0" text="Address" />
+            <TableColumn fx:id="city" prefWidth="209.0" text="City" />
+            <TableColumn fx:id="zip" minWidth="0.0" prefWidth="67.0" text="Zip " />
+            <TableColumn fx:id="phoneNumber" minWidth="0.0" prefWidth="225.0" text="Phone Number" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" layoutX="841.0" layoutY="564.0" prefHeight="65.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#backDashboardBTN" text=" Back to Dashboard">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

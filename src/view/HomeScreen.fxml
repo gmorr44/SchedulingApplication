@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
+   <children>
+      <ImageView fitHeight="654.0" fitWidth="1168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/background.png" />
+         </image>
+      </ImageView>
+      <GridPane alignment="CENTER_RIGHT" layoutX="398.0" layoutY="152.0" prefHeight="468.0" prefWidth="713.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="297.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="199.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="215.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="userName" text="?" textFill="#11ff00" GridPane.columnIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="393.0" text="You Have :" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="remainingTXT" text="Appointment&#10;Remaining&#10;Today!" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Text fx:id="greeting" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Good Morning :" textAlignment="RIGHT" wrappingWidth="392.140625">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="numAppointments" fill="#11ff00" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#exitBTN" prefHeight="39.0" prefWidth="161.0" text="Exit Application" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+      <VBox alignment="CENTER" layoutX="58.0" layoutY="88.0" prefHeight="548.0" prefWidth="338.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#CustomerBTN" prefHeight="106.0" prefWidth="273.0" text="Customer Records&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#appointmentBTN" prefHeight="106.0" prefWidth="273.0" text="Appointments&#10;" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#reportBTN" prefHeight="106.0" prefWidth="273.0" text="Report Generator">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Text fill="WHITE" layoutX="305.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scheduling Dashboard" textAlignment="CENTER" wrappingWidth="552.13671875">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

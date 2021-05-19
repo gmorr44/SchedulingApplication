@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="497.0" prefWidth="884.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewCustomerController">
+   <children>
+      <ImageView fitHeight="654.0" fitWidth="1168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/background.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="347.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Customer" textAlignment="CENTER" wrappingWidth="468.13671875">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <HBox alignment="TOP_CENTER" layoutX="857.0" layoutY="589.0" prefHeight="32.0" prefWidth="268.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#saveBTN" text="Add New Customer">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#cancelBTN" text="Cancel">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <GridPane layoutX="222.0" layoutY="152.0" prefHeight="351.0" prefWidth="602.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="295.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="3.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.0" minWidth="10.0" prefWidth="228.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="316.0" text="Name:" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="69.0" prefWidth="339.0" text="Address:" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="77.0" prefWidth="321.0" text="City:" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="62.0" prefWidth="372.0" text="Phone Number:" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameTXT" GridPane.columnIndex="2" />
+            <TextField fx:id="addressTXT" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="phoneTXT" promptText="XXX-XXX-XXXX" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="374.0" text="Country:" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cityTXT" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="countryTXT" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="zipTXT" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="336.0" text="Zip:" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
